@@ -1,0 +1,19 @@
+[project]
+name = "first_app"
+version = "0.1.0"
+description = "My first Python application project."
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I"]
+ignore = []
+exclude = ["tests"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
