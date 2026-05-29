@@ -3,6 +3,17 @@ name = "first_app"
 version = "0.1.0"
 description = "My first Python application project."
 requires-python = ">=3.10"
+readme = "README.md"
+authors = [
+    { name = "Brett" }
+    ]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.black]
 line-length = 88
@@ -17,3 +28,4 @@ exclude = ["tests"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
